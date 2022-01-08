@@ -1,0 +1,47 @@
+body{
+    background-color: #222122;
+}
+#form {
+    background-color: white;
+  margin: auto;
+  margin-top: 3%;
+  width: 35%;
+  /* border: 2px solid black; */
+  border-radius: 1%;
+  padding: 10px;
+  text-align: center;
+  height: 630px;
+}
+#form label{
+    font-family: monospace;
+}
+.image{
+    /* width: 40%; */
+    max-width: 100%;
+    height: auto;
+}
+.last_line{
+    display: flex;
+    justify-content: space-between;
+}
+.link {
+    text-decoration: none;
+    color: blue ;
+}
+.link:hover{
+    color: skyblue;
+}
+.last_line .submit{
+    width: 40%;
+    
+}
+#exists{
+    display: none;
+    color: red;
+}
+
+@media (max-width: 800px) { 
+    #form{
+        width: 80%;
+    }
+}
