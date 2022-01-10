@@ -2,12 +2,10 @@ body{
     background-color: #222122;
 }
 #form {
-    background-color: white;
+  background-color: white;
   margin: auto;
-  margin-top: -2%;
+  margin-top: 1.5%;
   width: 35%;
-  /* border: 2px solid black; */
-  border-radius: 1%;
   padding: 10px;
   text-align: center;
   /* height: 670px; */
