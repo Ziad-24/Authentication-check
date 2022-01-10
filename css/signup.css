@@ -10,7 +10,7 @@ body{
   border-radius: 1%;
   padding: 10px;
   text-align: center;
-  height: 630px;
+  /* height: 670px; */
 }
 #form label{
     font-family: monospace;
@@ -33,13 +33,16 @@ body{
 }
 .last_line .submit{
     width: 40%;
-    
 }
 #exists{
     display: none;
     color: red;
 }
 
+
+/* ------------------ */
+
+/* ------------------ */
 @media (max-width: 800px) { 
     #form{
         width: 80%;

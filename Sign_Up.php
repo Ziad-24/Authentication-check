@@ -5,13 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up</title>
+    <style>
+        #form{
+            height: 670px;
+        }
+    </style>
     <!-- Bootstrap CSS -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Current css -->
         <link rel="stylesheet" href="./css/signup.css">
     <!-- JQuery -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
- 
+    
 </head>
 <body>
     
@@ -21,13 +26,16 @@
                 <div class="image">
                     <img src="./images/th.jpg" alt="user pic" class="mx-auto d-block img-fluid">
                 </div>
+                
+                <h3 class="h3">Sign Up</h3>
+
                 <div class="inputs">
                     <label for="username">Username</label> <br>
                         <input type="text" placeholder="Enter your username" name ="username" required class="form-control"> <br>
                     <label for="fullname">Full Name</label> <br>
                         <input type="text" placeholder="Enter your full name" name="fullname" required class="form-control"> <br>
                     <label for="password">Password</label> <br>
-                        <input type="password" placeholder="Enter your password" name="password" required class="form-control"> <br>
+                        <input type="password" placeholder="Enter your password" name="password" required class="form-control" maxlength ="16"> <br>
 
                     <div class="last_line">
                         <span class="Login">Already have an account?  <span><a href="Log_In.php" class="link">Log In</a></span></span>
@@ -100,7 +108,7 @@
                         display: block;
                 }
                 #form{
-                    height: 670px;
+                    height: 705px;
                 }
         <?php
        }

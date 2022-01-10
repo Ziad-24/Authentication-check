@@ -1,0 +1,12 @@
+main{
+    margin: auto;
+    margin-top: 3%;
+    width: 55%;
+    /* border: 2px solid black; */
+    /* border-radius: 1%; */
+    padding: 10px;
+    text-align: center;
+}
+button{
+    width: 40%;
+}
