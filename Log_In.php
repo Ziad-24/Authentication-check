@@ -8,7 +8,7 @@
     <title>Log In</title>
     <style>
         #form{
-            height: 640px;
+            height: 650px;
         }
     </style>
      <!-- Bootstrap CSS -->
@@ -20,11 +20,15 @@
     <!-- create a log in form -->
         <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
 
-            <div id="form" class="form">
-
+            <div id="form" class="form ">
+                <div class="d-grid">
+                    <a href="index.php" class="btn btn-dark submitt "><h3 class="h3">Home Page</h3></a>
+                </div>
+                
                 <div class="image">
                     <img src="./images/th.jpg" alt="user pic" class="mx-auto d-block img-fluid">
                 </div>
+                
 
                 <h3 class="h3">Log In</h3>
 
@@ -108,6 +112,9 @@
             <style type="text/css">
                 #exists{
                         display: block;
+                }
+                #form{
+                    height: 680px;
                 }
                
         <?php

@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home Page</title>
     <!-- Current css -->
-       <link rel="stylesheet" href="./css/index.css">
+       <link rel="stylesheet" href="css/index.css">
     <!-- Bootstrap CSS -->
        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
@@ -18,15 +18,15 @@
                 <span>
                     <h3 class="h3">Welcome to this website <?php echo $_SESSION['FullName']; ?></h3> 
                     <button href="./Log_In.php" class="btn btn-outline-dark submit" name="signout">Sign out</button>
-                    <button href="./update.php" class="btn btn-outline-dark submit" name="update">Update</button>
-                    <!-- button to update data -->
+                    <button href="./update.php" class="btn btn-outline-dark submit" name="update">Update your data</button>
+                    <img src="images/meme.jpg" alt="meme" id="image" style="margin: 3% 8% 0 -2%;" class="mx-auto d-block img-fluid">
                 </span>
             </section>
 
             <section class="not-loggedin">
                 <h3 class="h3" >Hello Guest</h3> <br>
-                <a href="Sign_Up.php" class="btn btn-outline-dark submit" name="up">Sign up</a>
-                <a href="Log_In.php" class="btn btn-outline-dark submit" name="in">Log in</a>
+                <button class="btn btn-outline-dark submit" name="up">Sign up</button>
+                <button class="btn btn-outline-dark submit" name="in">Log in</button>
             </section>
         </form>
        

@@ -7,13 +7,15 @@
     <title>Sign Up</title>
     <style>
         #form{
-            height: 670px;
+            height: 710px;
+            /* margin: -5% 0 2% 0; */
+            
         }
     </style>
     <!-- Bootstrap CSS -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Current css -->
-        <link rel="stylesheet" href="./css/signup.css">
+        <link rel="stylesheet" href="css/signup.css">
     <!-- JQuery -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     
@@ -22,7 +24,10 @@
     
         <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
 
-            <div id="form">
+            <div id="form" >
+                <div class="d-grid">
+                    <a href="index.php" class="btn btn-dark submitt "><h3 class="h3">Home Page</h3></a>
+                </div>
                 <div class="image">
                     <img src="./images/th.jpg" alt="user pic" class="mx-auto d-block img-fluid">
                 </div>
@@ -32,18 +37,18 @@
                 <div class="inputs">
                     <label for="username">Username</label> <br>
                         <input type="text" placeholder="Enter your username" name ="username" required class="form-control"> <br>
-                    <label for="fullname">Full Name</label> <br>
+                        <label for="fullname">Full Name</label> <br>
                         <input type="text" placeholder="Enter your full name" name="fullname" required class="form-control"> <br>
                     <label for="password">Password</label> <br>
                         <input type="password" placeholder="Enter your password" name="password" required class="form-control" maxlength ="16"> <br>
 
-                    <div class="last_line">
-                        <span class="Login">Already have an account?  <span><a href="Log_In.php" class="link">Log In</a></span></span>
-                        <button type="submit" value="submit" name="signup-button" class="btn btn-outline-dark submit">Sign Up</button> <br>
-                    </div>
-                   
-                    
-                    <span id="exists"> <br> This username already exists , please enter another username</span>
+                        <div class="last_line">
+                            <span class="Login">Already have an account?  <span><a href="Log_In.php" class="link">Log In</a></span></span>
+                            <button type="submit" value="submit" name="signup-button" class="btn btn-outline-dark submit">Sign Up</button> <br>
+                        </div>
+                        
+                        
+                        <span id="exists"><br> This username already exists , please enter another username</span>
                 </div>
                
             </div>
@@ -53,6 +58,14 @@
     
         $host = "localhost";    $user = "root";     $pass = "";     $db = "authentication";
         $found = false;
+
+        function test_input($data) {
+            $data = trim($data);
+            $data = stripslashes($data);
+            $data = htmlspecialchars($data);
+            return $data;
+        }
+
         if ($_SERVER["REQUEST_METHOD"] == "POST")
         {
             $conn = mysqli_connect($host , $user , $pass , $db);
@@ -72,6 +85,8 @@
                 $fullname = mysqli_real_escape_string($conn, $_REQUEST['fullname']);
                 $password = mysqli_real_escape_string($conn, $_REQUEST['password']);
 
+                $username = test_input($username);
+                $fullname = test_input($fullname);    
                
                 $insert = "INSERT INTO user_info (Username, FullName, Userpass) VALUES ('$username', '$fullname', '$password')";
                                              
@@ -108,7 +123,7 @@
                         display: block;
                 }
                 #form{
-                    height: 705px;
+                    height: 760px;
                 }
         <?php
        }

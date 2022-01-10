@@ -71,10 +71,10 @@
                    {
                        $fullname = mysqli_real_escape_string($conn, $_REQUEST['fullname']);
                        $password = mysqli_real_escape_string($conn, $_REQUEST['password']);
-                       $name = $_POST['fullname'];
                        if( strlen($fullname) > 0  &&     strlen($password) > 0 )
                        { 
-                           $update1 ="UPDATE user_info SET FullName='$name' , Userpass=$password WHERE UserID=$ID";
+                           $update1 ="UPDATE user_info SET FullName='$fullname' , Userpass='$password' WHERE UserID=$ID";
+                           $_SESSION['FullName'] = $fullname;
                         //    $update2 = "UPDATE user_info SET WHERE UserID=$ID";
                           
                            $update_query = mysqli_query($conn,$update1);
